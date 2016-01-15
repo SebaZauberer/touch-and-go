@@ -1,0 +1,15 @@
+Warning Line 153, Column 33: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+        <section id="desarrolla">
+        
+Error Line 209, Column 97: No space between attributes.
+…://www.pinterest.com/seba_elsemidrag/"data-pin-scale-width="80" data-pin-scale…
+
+Error Line 218, Column 8: Stray start tag script.
+<script>
+
+Error Line 224, Column 36: Stray start tag script.
+        <script src="js/classie.js"></script>
+        
+Error Line 224, Column 36: Cannot recover after last error. Any further errors will be ignored.
+        <script src="js/classie.js"></script>
+        

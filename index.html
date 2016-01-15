@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Touch and go.js</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="js/jquery.fittext.js"></script>
+		<script src="js/touch-and-go.js"></script>
+        <!--[if lt IE 10]>
+        <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside';
+        document.createElement('footer');
+        document.createElement('figure');
+        document.createElement('figcaption');
+        </script>
+        <![endif]-->
+	</head>
+	
+	<body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+    
+    
+		<header  id="inicio" class="clearfix">
+
+			<div class="cbp-af-header">
+				<div class="cbp-af-inner">
+					<h1><a href="index.html">TOUCH <span class="negrita">AND GO.JS</span></a></h1>
+					<nav>
+						<a href="#inicio">Inicio</a>
+						<a href="#como-usarlo">Como usarlo</a>
+						<a href="#usuarios-dicen">Usuarios</a>
+						<a href="#desarrolla">Desarrollador</a>
+					</nav>
+				</div>
+			</div>
+         
+          <p class="mensaje-valor">Sumamente práctico, cambiará tu forma de desarrollar web</p>
+          <h2 id="titulo-encabezado">TOUCH <span class="negrita">AND GO.JS</span></h2>
+          <a href="#">Descargar</a>
+          <a href="#">Ver demo</a>
+          <div class="clear">
+              <p>Desarrollado por Seba Olate Diseños</p>
+          <img src="img/logo-seba-1.png" alt="logo de seba diseños">
+          </div>
+        </header>
+        
+        <div class="clear"></div>
+        
+        <section id="como-usarlo">
+           <div class="center">
+            <div class="grid50">
+                <h3>Como <span class="negrita">Usarlo</span></h3>
+                <p>Touch and Go.js es un plugin muy sencillo que te permite desplegar una caja oculta, con algún contenido, hacia un costado para poder visualizarlo con solo hacerle un click al botón que asignes. Para poder utilizarlo tienes que seguir los siguientes pasos:</p>
+                <p>En primer lugar, descarga todo el contenido del pluglin para luego , mediante la etiqueta &lt;script&gt;, ubicar los archivos en el HTML como en el ejemplo de la derecha:</p>
+                <p>A continuación, necesitas tener una estructura HTML como en el ejemplo de la derecha. Cabe decir que se necesitan tener dos elementos principales; primero una etiqueta con la class “expandir1” y luego una caja contenedora con una class como “caja-abierta1” (si se utiliza varias veces, es recomendable utilizar números para que el efecto funcione con la caja especifica)</p>
+                <p>Finalmente, si observamosel archivo .js, básicamente dice que una ves cargado el documento, al hacer click en la etiqueta con la class “expandir1”, se expanda y aparezca el contenedor con la class “caja-abierta1”. Una ves abierta, si retiras el mouse de dicho contenedor, este se oculta.</p>
+                <p>*NOTA: <br/>El nombre de las class puede variar dependiendo de tus necesidades, puedes copiar y pegar el codigo JQuery para conectar con varios elementos y contenedores.<br/> También, es recomendable posicionar la etiqueta y la caja contenedora con las clases, una arriba de la otra en el HTML.<br/>ES NECESARIO que de antemano se le asigne un "display: none;" al contenedor a mostrar<br/> Juegue :)</p>
+                
+                <div class="expandir">Haz click aquí para ver el ejemplo</div>
+                <div class="caja-abierta">
+                   <p>Coloca y saca el mouse de aquí</p>
+                   <i class="fa fa-hand-o-up"></i>
+               </div>
+                
+            </div><!--/grid50-->
+            
+            <div class="grid50">
+                <!--<img src="img/fork.png" alt="">-->
+                <i class="fa fa-code"></i>
+                
+                <pre>
+&lt;script src="js/jquery-1.10.2.js"&gt; &lt;/script&gt;
+&lt;script src="js/touch-and-go.js"&gt; &lt;/script&gt;</pre>
+                
+                <pre>
+&lt;a href="#" class="expandir1"&gt; abrir caja &lt;/a&gt;
+    &lt;div class="caja-abierta1"&gt;
+    &lt;p&gt; Nunc nec tortor felis. Etiam nec libero nec massa tincidunt efficitur sit amet et risus.&lt;/p&gt;
+&lt;/div&gt;</pre>
+                
+                <pre>
+    $(document).ready(function(){
+    $(".expandir").click(function(){
+            $(".caja-abierta").animate({
+                width: 'toggle'
+            });
+            $(".caja-abierta").mouseleave(function(){
+                $(this).fadeOut('fast',0);
+            });
+        });
+    });</pre>
+               
+               <!--<p>Y así es como desaparece...</p>-->
+               
+                
+            </div><!--/grid50-->
+           </div><!--/center-->
+           <div class="clear"></div>
+        </section>
+        
+        <section id="usuarios-dicen" class="clearfix">
+           <div class="center">
+                <h3>Nuestros usuarios <span class="negrita">Dicen:</span></h3>
+                <div class="comentario-usuario1">
+                    <div class="avatar1"><img src="img/pato.jpg" alt="Patricio"></div>
+                    <div class="caja-comentario1 bubble">
+                        <p>"Esta herramienta es sumamente útil para todo tipo de trabajo, nunca dejo de ocupar el "seba Query" en todos mis proyectos"</p>
+                        <cite>-Patricio Santa María, diseñador aficionado a la web</cite>
+                    </div>
+                </div>
+                
+                <div class="clear"></div>
+                
+                <div class="comentario-usuario2">
+                    <div class="avatar2"><img src="img/tity.jpg" alt="Valentina"></div>
+                    <div class="caja-comentario2 bubble2">
+                        <p>"Práctica y sencilla, facil de instalar y usar, me permite ocultar un montón de información para mostrarla solo cuando sea necesario :D"</p>
+                        <cite>-Valentina Risopatron Guajardo, Jefa grupo de desarrollo en Manguacos S.A.</cite>
+                    </div>
+                </div>
+                
+                <div class="clear"></div>
+                
+            </div>
+        </section>
+        
+        <div class="empresas">
+           <div class="center">
+                <div class="logos"><img src="img/logo1.jpg" alt="empresa element"></div>
+                <div class="logos"><img src="img/logo2.jpg" alt="servicio impuestos internos"></div>
+                <div class="logos"><img src="img/logo3.jpg" alt="violeta parra"></div>
+                <div class="logos"><img src="img/logo4.jpg" alt="nicanor para"></div>
+          </div>
+        </div>
+        
+        <section id="desarrolla">
+            <article class="yo">
+                <div class="center">
+                    <div class="grid50">
+                        <h3>El <span class="negrita">Desarrollador</span></h3>
+                        <p>Sebastian Olate H. es un diseñador y desarrollador web con amplia experiencia en su área. Sus conocimientos se basan en los conceptos de lenguajes de diagramación y programación, arquitectura de informacion, UX y UI.</p>
+                        <img src="img/logo-seba-1.png" alt="logo de seba diseños">
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ayudemonos">
+                <div class="center">
+                    
+                        <h3>Ayudemonos <span class="negrita">Todos</span></h3>
+                        <p>Dudas, errores, reclamos...  ¡Contactame!</p>
+                        <div class="clear"></div>
+                        
+                        <div class="grid80">
+                            <h5>CONTACTO</h5>
+                            <form>
+                                <input type="text" placeholder="Nombre">
+                                <input type="text" placeholder="Email">
+                                <br/>
+                                <textarea placeholder="Mensaje"></textarea>
+                                <input type="submit" value="Enviar mensaje">
+                            </form>
+                        </div>
+                        
+                        <div class="grid20">
+                            <h5>MAS INFORMACIÓN</h5>
+                            <span><i class="fa fa-whatsapp"></i>&nbsp;(+569) 92116903</span>
+                            <span><i class="fa fa-envelope-o"></i>&nbsp;seba.olate.h@gmail.com</span>
+                            <span><i class="fa fa-user"></i>&nbsp;Sebastian Olate H.</span>
+                            <span><i class="fa fa-globe"></i>&nbsp;Santiago, Chile</span>
+                        </div>
+                        
+                        <div class="clear"></div>
+                </div>
+            </article>
+        </section>
+        
+        
+        
+        <footer>
+            <div class="center">
+                <div class="sociales">
+                    <div class="fb-comments" data-href="https://www.facebook.com/Sebastian.Zauberer" data-width="300" data-numposts="5"></div>
+                </div>
+                
+                <div class="sociales">
+                    <a class="twitter-timeline" href="https://twitter.com/seba_zauberer" data-widget-id="610281770563538944">Tweets por el @seba_zauberer.</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                
+                <div class="sociales">
+                    <a data-pin-do="embedUser" href="https://www.pinterest.com/seba_elsemidrag/"data-pin-scale-width="80" data-pin-scale-height="200" data-pin-board-width="400">    Visita el perfil de Sebastian de Pinterest.</a><!-- Please call pinit.js only once per page -->
+                    <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>                
+                </div>
+                
+            </div>
+        </footer>
+        
+	</body>
+	
+<script type="text/javascript">
+	$("#titulo-encabezado").fitText(1.2, { minFontSize: '28px', maxFontSize: '65px' });
+</script>
+	
+</html>
+<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+        <script src="js/classie.js" type="text/javascript"></script>
+        <script src="js/cbpAnimatedHeader.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+	
+	$('a[href*=#]').click(function() {
+	
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	&& location.hostname == this.hostname) {
+	
+	var $target = $(this.hash);
+	
+	$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+	
+	if ($target.length) {
+	
+	var targetOffset = $target.offset().top;
+	
+	$('html,body').animate({scrollTop: targetOffset}, 1000);
+	
+	return false;
+            }
+	
+	       }
+	
+	   });
+	
+	});
+</script>
